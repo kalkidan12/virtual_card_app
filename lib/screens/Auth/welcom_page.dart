@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:foodorderinganddelivery/screens/Auth/login_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -105,7 +106,12 @@ class WelcomePage extends StatelessWidget {
                                   foregroundColor:
                                       Colors.white, // foreground (text) color
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => LoginPage()));
+                                },
                                 child: Text(
                                   'Get Started',
                                   style: TextStyle(
