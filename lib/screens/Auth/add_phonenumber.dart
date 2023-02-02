@@ -1,17 +1,17 @@
+import 'package:ecommerceapp/screens/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:foodorderinganddelivery/screens/Auth/verify_page.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+import 'phone_verify.dart';
+
+class AddphonNumber extends StatefulWidget {
+  const AddphonNumber({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<AddphonNumber> createState() => _AddphonNumberState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _AddphonNumberState extends State<AddphonNumber> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   final TextEditingController controller = TextEditingController();
@@ -22,6 +22,7 @@ class _LoginPageState extends State<LoginPage> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Container(
         width: size.width,
@@ -43,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                     " What Is Your Phone \n Number?",
                     style: TextStyle(
                         color: Colors.white70,
-                        fontSize: 30,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -113,27 +114,33 @@ class _LoginPageState extends State<LoginPage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => VerifyPage()));
+                                        builder: (context) => PhoneVerify()));
                               },
                               child: const Padding(
                                 padding: EdgeInsets.all(10.0),
                                 child: Text(
                                   'Send Verification Code',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.white, fontSize: 18),
                                 ),
                               )),
                         ),
                         const SizedBox(
                           height: 20,
                         ),
-                        Container(
-                          child: Text(
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MainScreen()));
+                          },
+                          child: const Text(
                             'Skip',
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 22),
+                                fontSize: 16),
                           ),
                         )
                       ],

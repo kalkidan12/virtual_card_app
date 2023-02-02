@@ -1,9 +1,12 @@
 import 'dart:ui';
 
+import 'package:ecommerceapp/screens/Auth/LoginPage.dart';
+import 'package:ecommerceapp/screens/Auth/singup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:foodorderinganddelivery/screens/Auth/login_page.dart';
+
+import 'add_phonenumber.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -19,6 +22,7 @@ class WelcomePage extends StatelessWidget {
       width: size.width,
       height: size.height,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Color.fromARGB(255, 114, 87, 114).withOpacity(0.5),
         body: SafeArea(
             child: Column(
@@ -110,7 +114,7 @@ class WelcomePage extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => LoginPage()));
+                                          builder: (context) => SignupPage()));
                                 },
                                 child: Text(
                                   'Get Started',

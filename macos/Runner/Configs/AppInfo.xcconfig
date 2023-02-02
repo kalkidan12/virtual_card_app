@@ -8,7 +8,7 @@
 PRODUCT_NAME = foodorderinganddelivery
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.foodorderinganddelivery
+PRODUCT_BUNDLE_IDENTIFIER = com.kaliget.ecommerceapp
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.
