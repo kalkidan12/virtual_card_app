@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565970376755",
+    "project_id": "kalycard-8bbc8",
+    "storage_bucket": "kalycard-8bbc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565970376755:android:b0dd3236c8fa27f3c2ab46",
+        "android_client_info": {
+          "package_name": "com.kaliget.investmentmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565970376755-7geie3f0v3s681kvb62gtg2erpbsm5rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEv0Q8WpCc8q2vkT5d6b3bLQhgf0MfB6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565970376755-7geie3f0v3s681kvb62gtg2erpbsm5rn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

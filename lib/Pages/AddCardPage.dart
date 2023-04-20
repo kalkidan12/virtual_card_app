@@ -23,7 +23,7 @@ class _AddCardPageState extends State<AddCardPage> {
         available: int.parse(availableController.text),
         currency: currencyController.text);
 
-    Provider.of<CardProvider>(context).addCard(card);
+    Provider.of<CardProvider>(context, listen: false).addCard(card);
 
     Navigator.of(context).pop(true);
   }

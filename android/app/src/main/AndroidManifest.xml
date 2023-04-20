@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kaliget.ecommerceapp">
+    package="com.kaliget.investmentmanager">
    <application
-        android:label="ecommerce app"
+        android:label="investment manager app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

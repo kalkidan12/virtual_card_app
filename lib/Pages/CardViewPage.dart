@@ -15,7 +15,7 @@ class CardViewPage extends StatefulWidget {
 
 class _CardViewPageState extends State<CardViewPage> {
   void onRemove(card) {
-    Provider.of<CardProvider>(context).removeCard(card);
+    Provider.of<CardProvider>(context, listen: false).removeCard(card);
 
     Navigator.of(context).pop(true);
   }
