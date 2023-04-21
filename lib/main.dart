@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:investmentmanager/Pages/HomePage.dart';
+import 'package:investmentmanager/Providers/AuthProvider.dart';
+import 'package:investmentmanager/screens/HomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:investmentmanager/Providers/CardProvider.dart';
+import 'package:investmentmanager/screens/auth/LoginPage.dart';
 import 'package:provider/provider.dart';
 
 import 'firebase_options.dart';
@@ -20,6 +22,9 @@ void main() async {
     ChangeNotifierProvider.value(
       value: CardProvider(),
     ),
+    ChangeNotifierProvider.value(
+      value: AuthProvider(),
+    ),
   ], child: const MyApp()));
 }
 
@@ -34,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }

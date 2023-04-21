@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:investmentmanager/Components/CardList.dart';
 import 'package:investmentmanager/Components/TransactionView.dart';
 import 'package:investmentmanager/Model/TransactionModel.dart';
-import 'package:investmentmanager/Pages/AddCardPage.dart';
+import 'package:investmentmanager/screens/AddCardPage.dart';
 import 'package:investmentmanager/Providers/CardProvider.dart';
 import 'package:provider/provider.dart';
 

@@ -1,33 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:investmentmanager/utils/ColorConstants.dart';
 
 class CustomInput extends StatelessWidget {
   final TextEditingController controller;
   TextInputType? keyboardType;
   String? Function(String?)? validator;
-  bool enabled;
   bool readOnly;
   bool obscureText;
+  void Function()? onPressed;
+  IconData? prefixIcon;
+  IconData? suffixIcon;
+  String? hintText;
+
   CustomInput(
       {super.key,
       required this.controller,
-      required this.enabled,
       this.keyboardType,
       required this.obscureText,
       required this.readOnly,
-      this.validator});
+      this.validator,
+      this.onPressed,
+      this.prefixIcon,
+      this.suffixIcon,
+      this.hintText});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 50,
       padding: EdgeInsets.all(7),
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      decoration:
+          BoxDecoration(color: Color.fromARGB(255, 243, 243, 243), boxShadow: [
         BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0, 2),
-            blurRadius: 4,
-            spreadRadius: 2)
+            color: Color.fromARGB(255, 240, 240, 240),
+            offset: Offset(0, 1),
+            blurRadius: 1,
+            spreadRadius: 1)
       ]),
       child: TextFormField(
         controller: controller,
@@ -37,8 +47,22 @@ class CustomInput extends StatelessWidget {
         obscureText: obscureText,
         obscuringCharacter: '*',
         validator: validator,
-        enabled: enabled,
-        decoration: InputDecoration(border: InputBorder.none),
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.all(0),
+            hintText: hintText,
+            border: InputBorder.none,
+            prefixIcon: Icon(
+              prefixIcon,
+              size: 25,
+              color: ColorConstants().primary,
+            ),
+            suffixIcon: IconButton(
+                onPressed: onPressed,
+                icon: Icon(
+                  suffixIcon,
+                  size: 25,
+                  color: ColorConstants().primary,
+                ))),
       ),
     );
   }
